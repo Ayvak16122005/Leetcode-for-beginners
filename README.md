@@ -11,4 +11,5 @@ This repository is dedicated to providing clear and efficient solutions to a var
 
 ## Problem List 
 1. [Two Sum](https://leetcode.com/problems/two-sum/solutions/6206490/cracking-the-code-mastering-the-two-sum-tvdec)
+   [solution](https://github.com/Ayvak16122005/Leetcode-for-beginners/blob/main/DAY%201)
 
