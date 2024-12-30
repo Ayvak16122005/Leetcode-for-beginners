@@ -1,6 +1,6 @@
 # Leetcode-for-beginners
 # it's for my people
-# LeetCode Solutions Repository Welcome to the **LeetCode Solutions Repository**!
+#  **LeetCode Solutions Repository**!
 
 ## Table of Contents 
 - - [Introduction](#introduction)
