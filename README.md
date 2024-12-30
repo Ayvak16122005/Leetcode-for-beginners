@@ -10,5 +10,5 @@
 This repository is dedicated to providing clear and efficient solutions to a variety of LeetCode problems. Each solution is accompanied by detailed explanations and notes to help you understand the problem and the approach used to solve it.
 
 ## Problem List 
-1. [Two Sum](#[two-sum](https://leetcode.com/problems/two-sum/solutions/6206490/cracking-the-code-mastering-the-two-sum-tvdec))
+1. [Two Sum](#https://leetcode.com/problems/two-sum/solutions/6206490/cracking-the-code-mastering-the-two-sum-tvdec)
 2. 
