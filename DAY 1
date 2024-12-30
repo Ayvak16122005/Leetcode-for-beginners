@@ -1,0 +1,94 @@
+Cracking the Code: Mastering the Two Sum Problem with Python:
+
+Refer:https://leetcode.com/problems/two-sum/description/?source=submission-ac
+view: https://leetcode.com/problems/two-sum/solutions/6206490/cracking-the-code-mastering-the-two-sum-tvdec/
+
+problem statement:
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You can return the answer in any order.
+
+ 
+
+Example 1:
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+Example 2:
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
+
+Example 3:
+Input: nums = [3,3], target = 6
+Output: [0,1]
+ 
+
+Constraints:
+2 <= nums.length <= 104
+-109 <= nums[i] <= 109
+-109 <= target <= 109
+Only one valid answer exists.
+
+Solution code:
+```python
+class Solution:
+    def twoSum(self, nums, target):
+        num_map = {}
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in num_map:
+                return [num_map[complement], i]
+            num_map[num] = i
+
+# Example usage
+nums = [2, 7, 11, 15]
+target = 9
+solution = Solution()
+print(solution.twoSum(nums, target))  # Output: [0, 1]
+
+```
+Notes For my people:
+**********
+Scenario:
+Imagine you're at a grocery store with a friend, and you both have a shopping list. You have a budget of ₹100, and you need to buy two items that together cost exactly ₹100. You have a list of items with their prices, and you need to find out which two items you can buy without exceeding your budget.
+
+Step-by-Step Explanation
+Shopping List: You have a list of items with their prices:
+
+Apples: ₹30
+Bananas: ₹20
+Oranges: ₹50
+Grapes: ₹40
+
+Budget: Your budget is ₹100.
+
+Goal: Find two items that together cost exactly ₹100.
+
+Brute Force Approach:
+You and your friend decide to check all possible pairs of items to see if their combined price matches your budget. This is like the brute force approach:
+Check Apples (₹30) + Bananas (₹20) = ₹50 (Not a match)
+Check Apples (₹30) + Oranges (₹50) = ₹80 (Not a match)
+Check Apples (₹30) + Grapes (₹40) = ₹70 (Not a match)
+Check Bananas (₹20) + Oranges (₹50) = ₹70 (Not a match)
+Check Bananas (₹20) + Grapes (₹40) = ₹60 (Not a match)
+Check Oranges (₹50) + Grapes (₹40) = ₹90 (Not a match)
+This approach is time-consuming because you have to check every possible pair.
+
+Hash Map Approach:
+Instead, you decide to use a more efficient method. You create a list of items you've already checked and their prices. This is like using a hash map:
+Initialization: Start with an empty list (hash map).
+Iteration: Go through each item on your list:
+Check Apples (₹30): The complement to reach ₹100 is ₹70. Add Apples to the list.
+Check Bananas (₹20): The complement to reach ₹100 is ₹80. Add Bananas to the list.
+Check Oranges (₹50): The complement to reach ₹100 is ₹50. Add Oranges to the list.
+Check Grapes (₹40): The complement to reach ₹100 is ₹60. Add Grapes to the list.
+Finding the Match: As you check each item, you also check if the complement (the amount needed to reach ₹100) is already in your list:
+When you check Oranges (₹50), you see that the complement (₹50) is already in your list (Oranges itself). So, you have found the two items that together cost ₹100: Oranges and Oranges.
+In this case, the hash map approach helps you find the solution more efficiently by keeping track of the items you've already checked and their prices.
+
+Conclusion:
+The "Two Sum" problem is similar to this grocery store scenario. You need to find two numbers in an array that add up to a given target. The hash map approach allows you to do this efficiently by keeping track of the numbers you've already seen and their complements.
+********
+Hope you understand.
+Ayvak
