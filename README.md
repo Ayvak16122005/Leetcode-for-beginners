@@ -13,4 +13,5 @@ This repository is dedicated to providing clear and efficient solutions to a var
 1. DAY 1-[Two Sum *PYTHON*](https://leetcode.com/problems/two-sum/solutions/6206490/cracking-the-code-mastering-the-two-sum-tvdec)
 - - [Description](https://leetcode.com/problems/two-sum/description/)
 - - [Solution](https://github.com/Ayvak16122005/Leetcode-for-beginners/blob/main/DAY%201)
+2. DAY 2-[]
 
